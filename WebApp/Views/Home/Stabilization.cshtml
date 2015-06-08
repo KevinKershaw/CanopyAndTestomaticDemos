@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Stabilization";
+}
+
+<h2>Stabilization</h2>
+<h5>Execute button calls javaxscript that may take up to 8 seconds to execute.</h5>
+
+<form id="form1" method="POST">
+    <div class="fitem">
+        <label>Status:</label><span id="statusMsg">Pending</span>
+    </div>
+    <div class="fitem">
+        <label></label><input type="button" id="execute" value="Execute" />
+    </div>
+</form>
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            $("#execute").click(function () {
+                var duration = Math.random() * 8000.0;
+                setTimeout(function() {$("#statusMsg").text("Done");}, duration);
+            });
+        });
+    </script>
+}

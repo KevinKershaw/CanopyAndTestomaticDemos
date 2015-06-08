@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Protected Content";
+}
+
+<h2>Protected Content</h2>
+
+@if (TempData["msg"] != null)
+{
+    <div>@TempData["msg"]</div>
+}

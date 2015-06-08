@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="WebApp.WebForms.Master" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <script src="<%= Page.ResolveUrl("~/Scripts/modernizr-2.8.3.js") %>"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Canopy and Testomatic Demos</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <form id="form2" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </form>
+        <hr />
+        <footer>
+            <p>&copy; <%= DateTime.Now.Year %> - Kevin Kershaw</p>
+        </footer>
+    </div>
+
+    <script src="<%= Page.ResolveUrl("~/Scripts/jquery-2.1.4.min.js") %>"></script>
+    <script src="<%= Page.ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
+    <asp:ContentPlaceHolder ID="scripts" runat="server" ></asp:ContentPlaceHolder>
+</body>
+</html>

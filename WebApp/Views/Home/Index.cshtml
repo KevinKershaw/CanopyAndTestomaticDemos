@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<ul>
+    <li>
+        @Html.ActionLink("Register", "Register", "Home")
+    </li>
+    <li>
+        @Html.ActionLink("Finders", "Finders", "Home")
+    </li>
+    <li>
+        @Html.ActionLink("Stabilization", "Stabilization", "Home")
+    </li>
+    <li>
+        @Html.ActionLink("Stabilization -- Ajax", "StabilizationAjax", "Home")
+    </li>
+    <li>
+        <a href="~/WebForms/Stabilization.aspx">Stabilization -- WebForms</a>
+    </li>
+    <li>
+        @Html.ActionLink("Stabilization -- Extend Timeout", "StabilizationExtendTimeout", "Home")
+    </li>
+    <li>
+        @Html.ActionLink("Warmup", "Warmup", "Home")
+    </li>
+</ul>
+

@@ -1,0 +1,5 @@
+﻿baseUrl: http://localhost:8080/
+logOutputFileTemplate: logs\test-run-{dt}.log
+excelTemplate: ExcelReportTemplate.xlsx
+excelOutputFileTemplate: logs\TestSummary-{dt}.xlsx
+htmlOutputFileTemplate: logs\TestSummary-{dt}.html

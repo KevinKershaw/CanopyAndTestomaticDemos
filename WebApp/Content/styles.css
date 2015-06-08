@@ -1,0 +1,7 @@
+﻿.navbar-inverse { background-color: beige;}
+div.fitem { padding: 4px;margin-left: 12px;}
+div.fitem label { width: 200px;display: inline-block;}
+div.fitem input[type=checkbox] + span { margin-left: 8px;}
+.w200 { width: 200px;}
+.top-shim { margin-top: 4px;}
+input[type=checkbox] + label { margin-left: 8px;}

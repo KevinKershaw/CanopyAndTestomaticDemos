@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Stabilization";
+}
+
+<h2>Stabilization -- Ajax</h2>
+<h5>Execute button makes ajax that may take up to 8 seconds to complete.</h5>
+
+<form id="form1" method="POST">
+    <div class="fitem">
+        <label>Status:</label><span id="statusMsg">Pending</span>
+    </div>
+    <div class="fitem">
+        <label></label><input type="button" id="execute" value="Execute Ajax Call" />
+    </div>
+</form>
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            $("#execute").click(function() {
+                $.getJSON("/Home/AjaxCall")
+                    .done(function(data) {
+                        $("#statusMsg").text(data.status);
+                    });
+            });
+        });
+    </script>
+}
+

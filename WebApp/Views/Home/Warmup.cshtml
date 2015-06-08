@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Warmup";
+}
+
+<h2>Warmup</h2>
+<h5>Simulates warming up a cold site, each step can take up to 8 seconds.</h5>
+
+<form id="form1" method="POST">
+    <div class="fitem">
+        <label>Web server status:</label><span id="statusMsg1">Pending</span>
+    </div>
+    <div class="fitem">
+        <label>DB status:</label><span id="statusMsg2">Pending</span>
+    </div>
+    <div class="fitem">
+        <label>Services status:</label><span id="statusMsg3">Pending</span>
+    </div>
+    <div class="fitem">
+        <label></label><input type="button" id="continue" value="Continue" />
+    </div>
+</form>
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            $("#continue").prop("disabled", true);
+            var dur1 = Math.random() * 8000.0;
+            var dur2 = Math.random() * 8000.0;
+            var dur3 = Math.random() * 8000.0;
+            setTimeout(function() {
+                $("#statusMsg1").text("Ready");
+                setTimeout(function() {
+                    $("#statusMsg2").text("Ready");
+                    setTimeout(function() {
+                        $("#statusMsg3").text("Ready");
+                        $("#continue").prop("disabled", false);
+                    }, dur3);
+                }, dur2);
+            }, dur1);
+
+            $("#continue").click(function () {
+                location.href = "http://localhost:8080/Home/Index";
+            });
+        });
+    </script>
+}
+
+
+
+
