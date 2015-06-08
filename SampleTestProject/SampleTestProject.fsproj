@@ -66,6 +66,7 @@
     <Compile Include="BasicExampleTests.fs" />
     <Compile Include="FindersTests.fs" />
     <Compile Include="StabilizationTests.fs" />
+    <Compile Include="OtherTests.fs" />
     <Compile Include="testMain.fs" />
     <None Include="ExcelReportTemplate.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

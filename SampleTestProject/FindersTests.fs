@@ -2,12 +2,13 @@
 open canopy
 open runner
 open testomaticLib
+open appConfig
 
 let all _ =
     context "Finders tests"
 
     "Finders" &&& fun _ ->
-        url "http:/localhost:8080/Home/Finders"
+        url (baseUrl + "Home/Finders")
         describe "locate field by id"
         setFieldValue "#firstName" "Fred"
         describe "locate field by label"

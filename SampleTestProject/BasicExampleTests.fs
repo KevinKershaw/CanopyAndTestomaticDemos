@@ -2,12 +2,13 @@
 open canopy
 open runner
 open testomaticLib
+open appConfig
 
 let all _ =
     context "Basic example"
 
     "Basic example with Testomatic" &&& fun _ ->
-        url "http://localhost:8080/"
+        url baseUrl
         click "Register"
         assertUrl "/Home/Register"
         setFieldValue "#emailAddress" "someone@somewhere.com"
@@ -20,7 +21,7 @@ let all _ =
         assertDisplayed "New account created"
 
     "Basic example in pure Canopy" &&& fun _ ->
-        url "http://localhost:8080/"
+        url baseUrl
         click "Register"
         on "/Home/Register"
         "#emailAddress" << "someone@somewhere.com"

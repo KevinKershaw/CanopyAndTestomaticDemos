@@ -11,6 +11,7 @@ let setupTests _ =
     BasicExampleTests.all ()
     FindersTests.all ()
     StabilizationTests.all ()
+    OtherTests.all ()
 
 [<EntryPoint>]
 let main argv = 
