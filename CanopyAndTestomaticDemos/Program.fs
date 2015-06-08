@@ -4,25 +4,9 @@ open runner
 open System
 open testomaticLib
 
-//chromeDir <- "C:\Projects\CanopyAndTestomaticDemos\BrowserSupport"
-//ieDir <- "C:\Projects\CanopyAndTestomaticDemos\BrowserSupport" //ie not working today, a little fiddly
+start chrome
 
-start firefox
-
-"Basic example in pure Canopy" &&& fun _ ->
-    url "http://localhost:8080/"
-    click "Register"
-    on "/Home/Register"
-    "#emailAddress" << "someone@somewhere.com"
-    "#emailAddress2" << "someone@somewhere.com"
-    "#password" << "Secret1"
-    "#password2" << "Secret1"
-    check "#terms"
-    click "Continue"
-    on "/Home/ProtectedContent"
-    displayed "New account created"
-
-"Same example with Testomatic" &&& fun _ ->
+"Basic example with Testomatic" &&& fun _ ->
     url "http://localhost:8080/"
     click "Register"
     assertUrl "/Home/Register"
@@ -34,6 +18,19 @@ start firefox
     click "Continue"
     assertUrl "/Home/ProtectedContent"
     assertDisplayed "New account created"
+
+"Same example in pure Canopy" &&& fun _ ->
+    url "http://localhost:8080/"
+    click "Register"
+    on "/Home/Register"
+    "#emailAddress" << "someone@somewhere.com"
+    "#emailAddress2" << "someone@somewhere.com"
+    "#password" << "Secret1"
+    "#password2" << "Secret1"
+    check "#terms"
+    click "Continue"
+    on "/Home/ProtectedContent"
+    displayed "New account created"
 
 "Finders" &&& fun _ ->
     url "http:/localhost:8080/Home/Finders"

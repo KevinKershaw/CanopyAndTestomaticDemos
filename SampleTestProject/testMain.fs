@@ -10,7 +10,7 @@ let appName = AppDomain.CurrentDomain.FriendlyName.Replace(".exe", "")
 let setupTests _ =
     BasicExampleTests.all ()
     FindersTests.all ()
-    //StabilizationTests.all ()
+    StabilizationTests.all ()
 
 [<EntryPoint>]
 let main argv = 
