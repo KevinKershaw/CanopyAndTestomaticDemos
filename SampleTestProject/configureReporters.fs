@@ -1,5 +1,4 @@
 ﻿module configureReporters
-open canopy
 open canopy.reporters
 open appConfig
 open commandLineArgs

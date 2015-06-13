@@ -1,6 +1,6 @@
 ﻿module OtherTests
 open canopy
-open runner
+open canopy.runner
 open testomaticLib
 open appConfig
 

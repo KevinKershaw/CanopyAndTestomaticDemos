@@ -13,6 +13,7 @@ type CommandLineArgs () = class
     member val logHtml : bool = false with get, set
     member val logExcel : bool = false with get, set
     member val teamCity : bool = false with get, set
+    member val noSlow : bool = false with get, set
     member val pressEnter : bool = false with get, set
     member val versionOnly : bool = false with get, set
     member val showUsage : bool = false with get, set
@@ -32,6 +33,7 @@ let parseCommandLine (args: string[]) =
             | "-loghtml" -> cla.logHtml <- true
             | "-logexcel" -> cla.logExcel <- true
             | "-teamcity" -> cla.teamCity <- true
+            | "-noslow" -> cla.noSlow <- true
             | "-pressenter" -> cla.pressEnter <- true
             | "-version" -> cla.versionOnly <- true
             | "-help" | "-?" -> cla.showUsage <- true
@@ -50,6 +52,7 @@ let usage = "usage: {appName} [args]\n" +
             "    -LogExcel (create excel repport of results, use excelOutputFileTemplate entry in config.yaml to specify file name)\n" +
             "    -LogHtml (create html file of results, use htmlOutputFileTemplate entry in config.yaml to specify file name)\n" +
             "    -TeamCity (create output for Team City, all other reporting output is OFF)\n" +
+            "    -NoSlow (do NOT run slow fixtures (no Warmup and StabilizationTests))\n" +
             "    -PressEnter (require entering return key at end of tests)\n" +
             "    -Help or -? (display this usage text and run no tests)\n" +
             "parameters are not case sensitive\n" +

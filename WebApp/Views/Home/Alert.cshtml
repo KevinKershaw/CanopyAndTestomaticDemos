@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Alert";
+}
+
+<h2>Alert</h2>
+<h5>"Call Alert" button calls javascript alert() function. "Call Confirm" button calls javascript confirm() function. prompt?</h5>
+
+<form id="form1" method="POST">
+    <div class="fitem">
+        <input type="button" id="callAlert" value="Call Alert" />
+    </div>
+    <div class="fitem">
+        <input type="button" id="callConfirm" value="Call Confirm" />
+    </div>
+    <div class="fitem">
+        <label>Result of confirm:</label><span id="statusMsg">Pending</span>
+    </div>
+    <div class="fitem">
+        <input type="button" id="callPrompt" value="Call Prompt" />
+    </div>
+    <div class="fitem">
+        <label>Result of prompt:</label><span id="statusMsg2">Pending</span>
+    </div>
+</form>
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            $("#callAlert").click(function () {
+                alert("Alert Popup");
+                $("#statusMsg").text(result);
+            });
+            $("#callConfirm").click(function () {
+                var result = confirm("Confirm Popup");
+                $("#statusMsg").text(result);
+            });
+            $("#callPrompt").click(function () {
+                var result = prompt("Prompt Popup");
+                if (result != null) {
+                    $("#statusMsg2").text(result);
+                }
+            });
+        });
+    </script>
+}

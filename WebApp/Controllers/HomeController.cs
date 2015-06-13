@@ -70,5 +70,15 @@ namespace WebApp.Controllers
         {
             return View();
         }
+
+        public ActionResult Alert()
+        {
+            return View();
+        }
+
+        public ActionResult OtherWindows()
+        {
+            return View();
+        }
     }
 }

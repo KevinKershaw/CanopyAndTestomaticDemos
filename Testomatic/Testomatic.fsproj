@@ -49,10 +49,11 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <Compile Include="testomaticLib.fs" />
+    <Compile Include="AssemblyInfo.fs" />
     <Compile Include="teeReporter.fs" />
     <Compile Include="logFileReporter.fs" />
     <Compile Include="excelReporter.fs" />
+    <Compile Include="testomaticLib.fs" />
     <Content Include="app.config" />
   </ItemGroup>
   <ItemGroup>

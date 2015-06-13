@@ -25,7 +25,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>bin\Debug\SampleTestProject.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
-    <StartArguments>-pressenter -firefox -warmup -logtext -logexcel -loghtml</StartArguments>
+    <StartArguments>-pressenter -firefox -noslow</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -66,6 +66,8 @@
     <Compile Include="BasicExampleTests.fs" />
     <Compile Include="FindersTests.fs" />
     <Compile Include="StabilizationTests.fs" />
+    <Compile Include="AlertsTests.fs" />
+    <Compile Include="SecondaryWindowTests.fs" />
     <Compile Include="OtherTests.fs" />
     <Compile Include="testMain.fs" />
     <None Include="ExcelReportTemplate.xlsx">
@@ -76,6 +78,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Content Include="packages.config" />
+    <None Include="sample.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="BrowserSupport\chromedriver.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

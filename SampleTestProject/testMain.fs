@@ -1,16 +1,18 @@
 ﻿module testMain
-open canopy
-open runner
+open canopy.runner
 open System
 open commandLineArgs
 open configureReporters
 
 let appName = AppDomain.CurrentDomain.FriendlyName.Replace(".exe", "")
 
-let setupTests _ =
+let setupTests (cla : CommandLineArgs) =
     BasicExampleTests.all ()
     FindersTests.all ()
-    StabilizationTests.all ()
+    if cla.noSlow = false then
+        StabilizationTests.all ()
+    AlertsTests.all ()
+    SecondaryWindowTests.all ()
     OtherTests.all ()
 
 [<EntryPoint>]
@@ -25,7 +27,7 @@ let main argv =
     else
         printfn "%s version %s" appName versionInfo.versionString
 
-        setupTests ()
+        setupTests cla
 
         setupReporters cla appName
 
@@ -34,7 +36,7 @@ let main argv =
             | Chrome -> start chrome
             | IE -> start ie
 
-        if cla.warmup then
+        if cla.warmup && cla.noSlow = false then
             warmup.warmupSite ()
 
         run ()
