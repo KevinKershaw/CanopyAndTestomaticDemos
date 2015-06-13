@@ -2,7 +2,7 @@
 open canopy.configuration
 open runner
 open System
-open testomaticLib
+open testomatic
 
 start firefox
 

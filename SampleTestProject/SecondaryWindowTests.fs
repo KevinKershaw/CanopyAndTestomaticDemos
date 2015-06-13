@@ -1,7 +1,7 @@
 ﻿module SecondaryWindowTests
 open canopy
 open canopy.runner
-open testomaticLib
+open testomatic
 open appConfig
 
 let all _ =

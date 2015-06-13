@@ -1,6 +1,5 @@
-﻿module logFileReporter
-open canopy
-open reporters
+﻿module testomatic.logFileReporter
+open canopy.reporters
 open System
 
 type LogFileReporter (logFileName : string) =

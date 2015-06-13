@@ -53,7 +53,7 @@
     <Compile Include="teeReporter.fs" />
     <Compile Include="logFileReporter.fs" />
     <Compile Include="excelReporter.fs" />
-    <Compile Include="testomaticLib.fs" />
+    <Compile Include="testomatic.fs" />
     <Content Include="app.config" />
   </ItemGroup>
   <ItemGroup>

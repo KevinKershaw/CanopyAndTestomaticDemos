@@ -1,4 +1,5 @@
 ﻿module testMain
+open canopy
 open canopy.runner
 open System
 open commandLineArgs

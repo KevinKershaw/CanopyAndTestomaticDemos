@@ -1,10 +1,9 @@
-﻿//namespace Testomatic
-//[<AutoOpen>]
-module testomaticLib
+﻿[<AutoOpen>]
+module testomatic.lib
 open System
 open canopy
 open canopy.configuration
-open teeReporter
+open testomatic.teeReporter
 
 let setFieldValue (f : string) (v : string) =
     f << v

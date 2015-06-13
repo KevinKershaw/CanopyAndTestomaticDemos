@@ -1,6 +1,5 @@
-﻿module teeReporter
-open canopy
-open reporters
+﻿module testomatic.teeReporter
+open canopy.reporters
 open System.Collections.Generic
 
 type IReporterEx =

@@ -1,6 +1,6 @@
-﻿module excelReporter
+﻿module testomatic.excelReporter
 open canopy.reporters
-open teeReporter
+open testomatic.teeReporter
 open System
 open System.Collections.Generic
 open TestomaticSupport

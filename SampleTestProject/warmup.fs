@@ -1,7 +1,7 @@
 ﻿module warmup
 open canopy
 open canopy.configuration
-open testomaticLib
+open testomatic
 open appConfig
 
 

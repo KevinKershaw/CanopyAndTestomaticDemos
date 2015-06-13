@@ -2,9 +2,9 @@
 open canopy.reporters
 open appConfig
 open commandLineArgs
-open teeReporter
-open logFileReporter
-open excelReporter
+open testomatic.teeReporter
+open testomatic.logFileReporter
+open testomatic.excelReporter
 open System
 
 let setupReporters (cla : CommandLineArgs) (appName : string) =
