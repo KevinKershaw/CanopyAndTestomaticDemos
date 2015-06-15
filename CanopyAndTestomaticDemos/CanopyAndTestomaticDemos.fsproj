@@ -58,35 +58,43 @@
   <ItemGroup>
     <Compile Include="Program.fs" />
     <None Include="App.config" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="canopy">
-      <HintPath>..\packages\Canopy\canopy.dll</HintPath>
+      <HintPath>..\packages\canopy.0.9.26\lib\canopy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FSharp.Core">
+      <HintPath>..\packages\FSharp.Core.3.1.2.1\lib\net40\FSharp.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Canopy\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="SizSelCsZzz">
-      <HintPath>..\packages\Canopy\SizSelCsZzz.dll</HintPath>
+      <HintPath>..\packages\SizSelCsZzz.0.3.36.0\lib\SizSelCsZzz.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
-    <Reference Include="WebDriver">
-      <HintPath>..\packages\Canopy\WebDriver.dll</HintPath>
-    </Reference>
-    <Reference Include="WebDriver.Support">
-      <HintPath>..\packages\Canopy\WebDriver.Support.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Testomatic\Testomatic.fsproj">
       <Name>Testomatic</Name>
       <Project>{c91527d9-9e35-4242-8b87-d2738b27a60e}</Project>
       <Private>True</Private>
     </ProjectReference>
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Selenium.WebDriver.2.45.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\packages\Selenium.Support.2.45.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
