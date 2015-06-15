@@ -7,7 +7,7 @@ open appConfig
 let all _ =
     context "Other windows / tabs"
 
-    "Open secondary window, assert contents, and close" &&&& fun _ ->
+    "Open secondary window, assert contents, and close" &&& fun _ ->
         url (baseUrl + "Home/OtherWindows")
         let origWindow = browser.CurrentWindowHandle
         click "More info on testomatic"

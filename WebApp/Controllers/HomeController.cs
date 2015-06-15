@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Web;
 using System.Web.Mvc;
 
 namespace WebApp.Controllers
@@ -78,6 +79,22 @@ namespace WebApp.Controllers
 
         public ActionResult OtherWindows()
         {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult FileUpload()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FileUpload(HttpPostedFileBase file)
+        {
+            if (file != null && file.ContentLength > 0)
+            {
+                return RedirectToAction("Index");
+            }
             return View();
         }
     }

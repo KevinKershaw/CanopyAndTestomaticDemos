@@ -68,6 +68,7 @@
     <Compile Include="StabilizationTests.fs" />
     <Compile Include="AlertsTests.fs" />
     <Compile Include="SecondaryWindowTests.fs" />
+    <Compile Include="FileUploadTests.fs" />
     <Compile Include="OtherTests.fs" />
     <Compile Include="testMain.fs" />
     <None Include="ExcelReportTemplate.xlsx">

@@ -10,4 +10,4 @@ let all _ =
     "Thank you" &&& fun _ ->
         url baseUrl
         click "Thank You"
-        assertDisplayed "Hope you enjoyed the show"
+        assertDisplayed "Hope you enjoyed the show."

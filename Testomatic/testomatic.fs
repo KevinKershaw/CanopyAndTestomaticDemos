@@ -103,3 +103,12 @@ let postcondition (s : string) =
     match box reporter with
     | :? IReporterEx as rx -> rx.postcondition s
     | _ -> ()
+
+let fileUploadSelectFile (f : string) (fileName : string) =
+    let mutable fn = fileName
+    if IO.Path.IsPathRooted(fileName) = false then
+        fn <- (AppDomain.CurrentDomain.BaseDirectory  + fileName)
+    (element f).SendKeys(fn)
+
+let fileUploadSelectPdf (f : string) =
+    fileUploadSelectFile f "sample.pdf"
