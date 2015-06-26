@@ -55,6 +55,13 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
+    <None Include="BrowserSupport\chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="BrowserSupport\IEDriverServer.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="BrowserSupport\ReadMe.txt" />
     <Compile Include="versionInfo.fs" />
     <Compile Include="appConfig.fs" />
     <None Include="config.yaml">
@@ -69,26 +76,20 @@
     <Compile Include="AlertsTests.fs" />
     <Compile Include="SecondaryWindowTests.fs" />
     <Compile Include="FileUploadTests.fs" />
+    <Compile Include="ExampleTestFixture.fs" />
     <Compile Include="OtherTests.fs" />
     <Compile Include="testMain.fs" />
-    <None Include="ExcelReportTemplate.xlsx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="App.config" />
     <None Include="package.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Content Include="packages.config" />
+    <None Include="ExcelReportTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="sample.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="BrowserSupport\chromedriver.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="BrowserSupport\IEDriverServer.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <Content Include="BrowserSupport\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="canopy">

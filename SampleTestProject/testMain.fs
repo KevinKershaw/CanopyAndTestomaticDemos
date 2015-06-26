@@ -15,6 +15,7 @@ let setupTests (cla : CommandLineArgs) =
     AlertsTests.all ()
     SecondaryWindowTests.all ()
     FileUploadTests.all ()
+    ExampleTestFixture.all ()
     OtherTests.all ()
 
 [<EntryPoint>]
