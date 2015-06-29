@@ -19,7 +19,7 @@ start firefox
     assertUrl "/Home/ProtectedContent"
     assertDisplayed "New account created"
 
-"Same example in pure Canopy" &&! fun _ ->
+"Same example in pure Canopy" &&& fun _ ->
     url "http://localhost:8080/"
     click "Register"
     on "/Home/Register"
@@ -32,7 +32,7 @@ start firefox
     on "/Home/ProtectedContent"
     displayed "New account created"
 
-"Finders" &&! fun _ ->
+"Finders" &&& fun _ ->
     url "http:/localhost:8080/Home/Finders"
     describe "locate field by id"
     setFieldValue "#firstName" "Fred"
@@ -51,30 +51,30 @@ start firefox
     describe "locate field by value"
     click "Continue"
 
-"Stabilization 1" &&! fun _ ->
+"Stabilization 1" &&& fun _ ->
     url "http://localhost:8080/Home/Stabilization"
     click "Execute"
     assertDisplayed "Done"
 
-"Stabilization 2" &&! fun _ ->
+"Stabilization 2" &&& fun _ ->
     url "http://localhost:8080/Home/Stabilization"
     click "Execute"
     waitFor (fun _ -> (read "#statusMsg") = "Done")
     assertDisplayed "Done"
 
-"Stabilization Ajax 1" &&! fun _ ->
+"Stabilization Ajax 1" &&& fun _ ->
     url "http://localhost:8080/Home/StabilizationAjax"
     click "Execute Ajax Call"
     waitFor (fun _ -> (read "#statusMsg") = "Done")
     assertDisplayed "Done"
 
-"Stabilization Ajax 2" &&! fun _ ->
+"Stabilization Ajax 2" &&& fun _ ->
     url "http://localhost:8080/Home/StabilizationAjax"
     click "Execute Ajax Call"
     waitForAjax ()
     assertDisplayed "Done"
 
-"Stabilization Webforms" &&! fun _ ->
+"Stabilization Webforms" &&& fun _ ->
     url "http://localhost:8080/WebForms/Stabilization.aspx"
     click "Next"
     waitForPostback ()
@@ -90,7 +90,7 @@ start firefox
     assertDisplayed "Protected Content"
     assertDisplayed "Terms accepted"
     
-"Stabilization Webforms by Id" &&! fun _ ->
+"Stabilization Webforms by Id" &&& fun _ ->
     url "http://localhost:8080/WebForms/Stabilization.aspx"
     click "#ContentPlaceHolder1_Next"
     waitForPostback ()
@@ -106,7 +106,7 @@ start firefox
     assertDisplayed "Protected Content"
     assertDisplayed "Terms accepted"
 
-"Stabilization ExtendTimeout" &&! fun _ ->
+"Stabilization ExtendTimeout" &&& fun _ ->
     url "http://localhost:8080/Home/StabilizationExtendTimeout"
     click "Execute"
     extendTimeout (fun _ -> 
